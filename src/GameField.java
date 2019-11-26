@@ -113,13 +113,6 @@ class Surface extends JPanel implements ActionListener{
         for (Mountain mountain : gameStage.getMountains()) {
             map[(mountain.getPosX() - 50) / 100][(mountain.getPosY() - 50) / 100] = mountain;
         }
-        addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                super.keyPressed(e);
-                if (e.getKeyCode() == KeyCode.A)
-            }
-        });
         addMouseListener(new MouseAdapter() {
             public int check(int x, int y) {
                 if (y <= 945 && y >= 895 ) {
